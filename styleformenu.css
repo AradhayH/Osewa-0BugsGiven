@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    height: 100vh; /* Ensure the columns occupy the whole screen */
+}
+
+.column {
+    flex-grow: 0.5; /* Equal width for all columns */
+    transition: flex-grow 0.3s; /* Smooth transition for width changes */
+}
+
+.column:hover {
+    flex-grow: 2; /* Increase width on hover */
+}
+
+.container:hover .column:not(:hover) {
+    flex-grow: 0.5; /* Decrease width of other columns */
+}
+
+/* Add styles like background colors or borders as needed */
+#column1 {
+    background-color: #ff9999;
+}
+
+#column2 {
+    background-color: #99ff99;
+}
+
+#column3 {
+    background-color: #9999ff;
+}
+
+.column h1 {
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center text horizontally */
+    line-height: 100vh; /* Center text vertically */
+}
